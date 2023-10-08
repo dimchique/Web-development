@@ -11,6 +11,109 @@
             </font>        
         </p>
         <p>
+            <details>
+                <p><summary>Постройка графика</summary></p>
+            <form>
+                <p>
+            Значение по оси OX:<br>
+            <label><input type="radio" name="graph" value="attribute">Атрибут</label><br>
+            <label><input type="radio" name="graph" value="name">Имя персонажа</label><br>
+            <label><input type="radio" name="graph" value="range">Дальность атаки</label><br>
+            </p>
+            <p>
+            Результат:<br>
+            <label><input type="checkbox" name="graph" value="hp">Количество здоровья</label><br>
+            <label><input type="checkbox" name="graph" value="mana">Количество маны</label><br>
+            <label><input type="checkbox" name="graph" value="dmg">Атака</label><br>
+            </p>
+            <p>
+            <input type="button" value="Построить">
+            <input type="reset" value="Сбросить настройки">
+            </p>
+            </form>
+            </details>
+        </p>
+        <p>
+            <details>
+                <p><summary>Фильтр</summary></p>
+            <form>
+                <p>
+                <label>Имя персонажа: <input type="text"></label><br>
+                <label>Атрибут: <input type="text"></label><br>
+                <label>Количество здоровья: от <input type="text"> до <input type="text"></label><br>
+                <label>Количество маны: от <input type="text"> до <input type="text"></label><br>
+                <label>Атака: от <input type="text"> до <input type="text"></label><br>
+                </p>
+                <p>
+                <input type="button" value="Найти">
+                <input type="reset" value="Сбросить фильтр">
+                </p>
+            </form>
+            </details>
+        </p>
+        <p>
+            <details>
+                <summary>Сортировка</summary>
+            <form>
+                <p>Первый уровень:
+                <select>
+                    <option>Имя персонажа</option>
+                    <option>Атрибут</option>
+                    <option>Количество здоровья</option>
+                    <option>Количество маны</option>
+                    <option>Атака</option>
+                    <option>Задержка перед атакой</option>
+                    <option>Дальность атаки</option>
+                    <option>Скорость передвижения</option>
+                    <option>Броня</option>
+                </select>
+                <select>
+                    <option>По возрастанию</option>
+                    <option>По убыванию</option>
+                </select>
+                </p>
+                <p>Второй уровень:
+                    <select>
+                    <option>Имя персонажа</option>
+                    <option>Атрибут</option>
+                    <option>Количество здоровья</option>
+                    <option>Количество маны</option>
+                    <option>Атака</option>
+                    <option>Задержка перед атакой</option>
+                    <option>Дальность атаки</option>
+                    <option>Скорость передвижения</option>
+                    <option>Броня</option>
+                    </select>
+                    <select>
+                        <option>По возрастанию</option>
+                        <option>По убыванию</option>
+                    </select>
+                </p>
+                <p>Третий уровень:
+                <select>
+                    <option>Имя персонажа</option>
+                    <option>Атрибут</option>
+                    <option>Количество здоровья</option>
+                    <option>Количество маны</option>
+                    <option>Атака</option>
+                    <option>Задержка перед атакой</option>
+                    <option>Дальность атаки</option>
+                    <option>Скорость передвижения</option>
+                    <option>Броня</option>
+                </select>
+                <select>
+                    <option>По возрастанию</option>
+                    <option>По убыванию</option>
+                </select>
+                </p>
+                <p>
+                    <input type="button" value="Сортировать">
+                    <input type="reset" value="Сбросить настройки">
+                </p>
+            </form>
+            </details>
+        </p>
+        <p>
         <table cellpadding="5" border="2" align="center">
             <thead>
             <tr>
