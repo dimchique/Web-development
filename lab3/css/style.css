@@ -6,7 +6,7 @@ a{
 body{
     background-attachment: fixed;
     color: white;
-    font-family: "Comic Sans MS";
+    font-family: 'Jost', sans-serif;
 }
 
 .item{
@@ -33,4 +33,32 @@ body{
 
 .active{
     text-decoration: underline ;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    display: inline;
+    vertical-align: middle;
+}
+  
+.footer a{
+    font-size: 1em;
+    color: white;
+}
+
+.footer img{
+    height: 1.2em;
+    margin-right: 5px;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float: right;
 }
