@@ -1,0 +1,36 @@
+a{
+    text-decoration: none;
+    color: #c6c9c5;
+}
+
+body{
+    background-attachment: fixed;
+    color: white;
+    font-family: "Comic Sans MS";
+}
+
+.item{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 60px;
+    margin: 0px 5px;
+}
+
+.itemimg{
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.menu{
+    width: 50%;
+    float: none;
+    overflow: hidden;
+    font-family: "Palatino Linotype";
+}
+
+.active{
+    text-decoration: underline ;
+}
