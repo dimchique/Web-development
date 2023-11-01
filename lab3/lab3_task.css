@@ -1,0 +1,22 @@
+.content{
+    background-color: #7ddb7d;
+    width: 80%;
+    margin: auto;
+}
+
+.card{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    margin: 4px;
+    width: 31%;
+    height: 40%;
+    vertical-align: top;
+}
+
+.text{
+    padding: 5px;
+}
+.det{
+    font-weight: bold;
+}
