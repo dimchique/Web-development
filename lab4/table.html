@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Dota 2 - таблица героев</title>
+        <link type="image/png" sizes="16x16" rel="icon" href="img/dota2icon.png">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    </head>
+    <body background="img/wp_heroes.jpg">
+        <div class="menu">
+            <div class="itemimg"><a href="index.html"><img src="img/dotamenuicon.jpg" class="itemimg"></a></div>
+            <div class="item"><a href="heroes.html">Герои</a></div>
+            <div class="item"><a class="active" href="table.html">Информация о героях</a></div> 
+        </div>  
+        <p>
+            <details>
+                <p><summary>Построение графика</summary></p>
+            <form>
+                <p>
+            Значение по оси OX:<br>
+            <label><input type="radio" name="graph" value="attribute">Атрибут</label><br>
+            <label><input type="radio" name="graph" value="attacktype">Тип атаки</label><br>
+            <label><input type="radio" name="graph" value="attackdelay">Задержка перед атакой</label><br>
+            </p>
+            <p>
+            Результат:<br>
+            <label><input type="checkbox" name="graph" value="minhp">Минимальное количество здоровья</label><br>
+            <label><input type="checkbox" name="graph" value="avghp">Среднее количество здоровья</label><br>
+            <label><input type="checkbox" name="graph" value="maxhp">Максимальное количество здоровья</label><br>
+            <label><input type="checkbox" name="graph" value="heroesamount">Количество персонажей</label><br>
+            <label><input type="checkbox" name="graph" value="minmana">Минимальное количество маны</label><br>
+            <label><input type="checkbox" name="graph" value="avgmana">Среднее количество маны</label><br>
+            <label><input type="checkbox" name="graph" value="maxmana">Максимальное количество маны</label><br>
+            <label><input type="checkbox" name="graph" value="mindmg">Минимальная атака</label><br>
+            <label><input type="checkbox" name="graph" value="avgdmg">Средняя атака</label><br>
+            <label><input type="checkbox" name="graph" value="maxdmg">Максимальная атака</label><br>
+            </p>
+            <p>
+            <input type="button" value="Построить">
+            <input type="reset" value="Сбросить настройки">
+            </p>
+            </form>
+            </details>
+        </p>
+        <p>
+            <details>
+                <p><summary>Фильтр</summary></p>
+            <form>
+                <p>
+                <label>Имя персонажа: <input type="text"></label><br>
+                <label>Атрибут: <input type="text"></label><br>
+                <label>Количество здоровья: от <input type="text"> до <input type="text"></label><br>
+                <label>Количество маны: от <input type="text"> до <input type="text"></label><br>
+                <label>Атака: от <input type="text"> до <input type="text"></label><br>
+                </p>
+                <p>
+                <input type="button" value="Найти">
+                <input type="reset" value="Сбросить фильтр">
+                </p>
+            </form>
+            </details>
+        </p>
+        <p>
+            <details>
+                <summary>Сортировка</summary>
+            <form>
+                <p>Первый уровень:
+                <select>
+                    <option>Имя персонажа</option>
+                    <option>Атрибут</option>
+                    <option>Количество здоровья</option>
+                    <option>Количество маны</option>
+                    <option>Атака</option>
+                    <option>Задержка перед атакой</option>
+                    <option>Дальность атаки</option>
+                    <option>Скорость передвижения</option>
+                    <option>Броня</option>
+                </select>
+                <select>
+                    <option>По возрастанию</option>
+                    <option>По убыванию</option>
+                </select>
+                </p>
+                <p>Второй уровень:
+                    <select>
+                    <option>Имя персонажа</option>
+                    <option>Атрибут</option>
+                    <option>Количество здоровья</option>
+                    <option>Количество маны</option>
+                    <option>Атака</option>
+                    <option>Задержка перед атакой</option>
+                    <option>Дальность атаки</option>
+                    <option>Скорость передвижения</option>
+                    <option>Броня</option>
+                    </select>
+                    <select>
+                        <option>По возрастанию</option>
+                        <option>По убыванию</option>
+                    </select>
+                </p>
+                <p>Третий уровень:
+                <select>
+                    <option>Имя персонажа</option>
+                    <option>Атрибут</option>
+                    <option>Количество здоровья</option>
+                    <option>Количество маны</option>
+                    <option>Атака</option>
+                    <option>Задержка перед атакой</option>
+                    <option>Дальность атаки</option>
+                    <option>Скорость передвижения</option>
+                    <option>Броня</option>
+                </select>
+                <select>
+                    <option>По возрастанию</option>
+                    <option>По убыванию</option>
+                </select>
+                </p>
+                <p>
+                    <input type="button" value="Сортировать">
+                    <input type="reset" value="Сбросить настройки">
+                </p>
+            </form>
+            </details>
+        </p>
+        <p>
+        <table cellpadding="5" border="2" align="center">
+            <thead>
+            <tr>
+                <th>Имя персонажа</th>
+                <th>Атрибут</th>
+                <th>Количество здоровья</th>
+                <th>Количество маны</th>
+                <th>Атака</th>
+                <th>Задержка перед атакой</th>
+                <th>Дальность атаки</th>
+                <th>Скорость передвижения</th>
+                <th>Броня</th>
+                <th>Тип атаки</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr><td>Abbadon</td><td>Универсальный</td><td>604</td><td>303</td><td>56</td><td>1</td><td>150</td><td>325</td><td>3</td><td>Ближний</td></tr>
+                <tr><td>Alchemist</td><td>Сила</td><td>626</td><td>375</td><td>55</td><td>2</td><td>150</td><td>295</td><td>4</td><td>Ближний</td></tr>
+                <tr><td>Ancient apparation</td><td>Интеллект</td><td>560</td><td>351</td><td>54</td><td>2</td><td>675</td><td>285</td><td>2</td><td>Дальний</td></tr>
+                <tr><td>Antimage</td><td>Ловкость</td><td>538</td><td>219</td><td>57</td><td>1</td><td>150</td><td>310</td><td>5</td><td>Ближний</td></tr>
+                <tr><td>Arc warden</td><td>Ловкость</td><td>604</td><td>363</td><td>56</td><td>1</td><td>625</td><td>285</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Axe</td><td>Сила</td><td>670</td><td>291</td><td>59</td><td>2</td><td>150</td><td>315</td><td>2</td><td>Дальний</td></tr>
+                <tr><td>Bane</td><td>Универсальный</td><td>626</td><td>351</td><td>53</td><td>2</td><td>400</td><td>305</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Batrider</td><td>Универсальный</td><td>736</td><td>339</td><td>45</td><td>2</td><td>400</td><td>330</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Beastmaster</td><td>Универсальный</td><td>670</td><td>267</td><td>48</td><td>1</td><td>150</td><td>305</td><td>2</td><td>Ближний</td></tr>
+                <tr><td>Bloodseeker</td><td>Ловкость</td><td>648</td><td>279</td><td>63</td><td>2</td><td>150</td><td>300</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Bounty hunter</td><td>Ловкость</td><td>538</td><td>339</td><td>62</td><td>2</td><td>150</td><td>325</td><td>9</td><td>Ближний</td></tr>
+                <tr><td>Brewmaster</td><td>Универсальный</td><td>626</td><td>255</td><td>55</td><td>2</td><td>150</td><td>310</td><td>3</td><td>Ближний</td></tr>
+                <tr><td>Bristleback</td><td>Сила</td><td>604</td><td>243</td><td>61</td><td>1</td><td>150</td><td>295</td><td>4</td><td>Ближний</td></tr>
+                <tr><td>Broodmother</td><td>Универсальный</td><td>538</td><td>291</td><td>53</td><td>2</td><td>175</td><td>285</td><td>2</td><td>Ближний</td></tr>
+                <tr><td>Centaur warruner</td><td>Сила</td><td>714</td><td>255</td><td>65</td><td>2</td><td>150</td><td>310</td><td>0</td><td>Ближний</td></tr>
+                <tr><td>Chaos knight</td><td>Сила</td><td>648</td><td>291</td><td>83</td><td>2</td><td>150</td><td>325</td><td>5</td><td>Ближний</td></tr>
+                <tr><td>Chen</td><td>Универсальный</td><td>626</td><td>303</td><td>55</td><td>1</td><td>650</td><td>305</td><td>1</td><td>Дальний</td></tr>
+                <tr><td>Clinkz</td><td>Ловкость</td><td>494</td><td>327</td><td>50</td><td>2</td><td>600</td><td>290</td><td>4</td><td>Дальний</td></tr>
+                <tr><td>Clockwerk</td><td>Универсальный</td><td>714</td><td>291</td><td>50</td><td>2</td><td>150</td><td>310</td><td>3</td><td>Ближний</td></tr>
+                <tr><td>Crystal maiden</td><td>Интеллект</td><td>494</td><td>291</td><td>54</td><td>2</td><td>600</td><td>280</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Dark seer</td><td>Универсальный</td><td>604</td><td>327</td><td>56</td><td>2</td><td>150</td><td>295</td><td>5</td><td>Ближний</td></tr>
+                <tr><td>Dark willow</td><td>Универсальный</td><td>560</td><td>327</td><td>54</td><td>1</td><td>475</td><td>290</td><td>2</td><td>Дальний</td></tr>
+                <tr><td>Dazzle</td><td>Универсальный</td><td>516</td><td>375</td><td>53</td><td>1</td><td>575</td><td>305</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Death prophet</td><td>Интеллект</td><td>582</td><td>363</td><td>57</td><td>1</td><td>600</td><td>290</td><td>4</td><td>Дальний</td></tr>
+                <tr><td>Disruptor</td><td>Интеллект</td><td>582</td><td>315</td><td>51</td><td>2</td><td>625</td><td>295</td><td>2</td><td>Дальний</td></tr>
+                <tr><td>Doom</td><td>Сила</td><td>648</td><td>255</td><td>68</td><td>2</td><td>200</td><td>285</td><td>4</td><td>Ближний</td></tr>
+                <tr><td>Dragon knight</td><td>Сила</td><td>582</td><td>291</td><td>61</td><td>1</td><td>150</td><td>315</td><td>3</td><td>Ближний</td></tr>
+                <tr><td>Drow ranger</td><td>Ловкость</td><td>472</td><td>255</td><td>56</td><td>2</td><td>625</td><td>300</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Earth spirit</td><td>Сила</td><td>604</td><td>291</td><td>57</td><td>2</td><td>150</td><td>290</td><td>2</td><td>Ближний</td></tr>
+                <tr><td>Earthshaker</td><td>Сила</td><td>604</td><td>291</td><td>59</td><td>2</td><td>150</td><td>315</td><td>4</td><td>Ближний</td></tr>
+                <tr><td>Elder titan</td><td>Сила</td><td>692</td><td>351</td><td>59</td><td>2</td><td>150</td><td>310</td><td>2</td><td>Ближний</td></tr>
+                <tr><td>Ember spirit</td><td>Ловкость</td><td>604</td><td>315</td><td>59</td><td>1</td><td>150</td><td>300</td><td>4</td><td>Ближний</td></tr>
+                <tr><td>Enchantress</td><td>Интеллект</td><td>494</td><td>339</td><td>53</td><td>1</td><td>575</td><td>320</td><td>4</td><td>Дальний</td></tr>
+                <tr><td>Enigma</td><td>Универсальный</td><td>582</td><td>303</td><td>50</td><td>1</td><td>500</td><td>290</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Faceless void</td><td>Ловкость</td><td>560</td><td>255</td><td>63</td><td>2</td><td>150</td><td>300</td><td>4</td><td>Ближний</td></tr>
+                <tr><td>Grimstroke</td><td>Интеллект</td><td>582</td><td>375</td><td>50</td><td>2</td><td>600</td><td>290</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Gyrocopter</td><td>Ловкость</td><td>604</td><td>327</td><td>48</td><td>1</td><td>365</td><td>320</td><td>6</td><td>Дальний</td></tr>
+                <tr><td>Huskar</td><td>Сила</td><td>626</td><td>291</td><td>49</td><td>2</td><td>400</td><td>295</td><td>2</td><td>Дальний</td></tr>
+                <tr><td>Invoker</td><td>Универсальный</td><td>665</td><td>293</td><td>56</td><td>2</td><td>420</td><td>298</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Io</td><td>Интеллект</td><td>535</td><td>318</td><td>65</td><td>1</td><td>497</td><td>298</td><td>9</td><td>Дальний</td></tr>
+                <tr><td>Jakiro</td><td>Интеллект</td><td>535</td><td>338</td><td>75</td><td>1</td><td>260</td><td>310</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Juggernaut</td><td>Ловкость</td><td>506</td><td>329</td><td>59</td><td>2</td><td>210</td><td>308</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Keeper of the light</td><td>Интеллект</td><td>736</td><td>293</td><td>68</td><td>1</td><td>486</td><td>288</td><td>1</td><td>Дальний</td></tr>
+                <tr><td>Kunkka</td><td>Сила</td><td>519</td><td>314</td><td>49</td><td>2</td><td>178</td><td>316</td><td>8</td><td>Ближний</td></tr>
+                <tr><td>Legion commander</td><td>Сила</td><td>586</td><td>349</td><td>54</td><td>2</td><td>384</td><td>314</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Leshrac</td><td>Интеллект</td><td>640</td><td>314</td><td>52</td><td>2</td><td>283</td><td>303</td><td>0</td><td>Дальний</td></tr>
+                <tr><td>Lich</td><td>Интеллект</td><td>574</td><td>300</td><td>46</td><td>2</td><td>409</td><td>295</td><td>2</td><td>Дальний</td></tr>
+                <tr><td>Lifestealer</td><td>Ловкость</td><td>508</td><td>320</td><td>58</td><td>2</td><td>304</td><td>294</td><td>9</td><td>Ближний</td></tr>
+                <tr><td>Lina</td><td>Интеллект</td><td>556</td><td>343</td><td>62</td><td>2</td><td>276</td><td>280</td><td>7</td><td>Дальний</td></tr>
+                <tr><td>Lion</td><td>Интеллект</td><td>702</td><td>303</td><td>47</td><td>2</td><td>360</td><td>301</td><td>4</td><td>Дальний</td></tr>
+                <tr><td>Lone druid</td><td>Универсальный</td><td>687</td><td>329</td><td>57</td><td>1</td><td>190</td><td>297</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Luna</td><td>Интеллект</td><td>736</td><td>321</td><td>41</td><td>2</td><td>361</td><td>319</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Lycan</td><td>Универсальный</td><td>609</td><td>313</td><td>44</td><td>1</td><td>286</td><td>287</td><td>6</td><td>Дальний</td></tr>
+                <tr><td>Magnus</td><td>Универсальный</td><td>581</td><td>327</td><td>75</td><td>2</td><td>320</td><td>307</td><td>5</td><td>Ближний</td></tr>
+                <tr><td>Medusa</td><td>Ловкость</td><td>680</td><td>331</td><td>47</td><td>2</td><td>170</td><td>308</td><td>6</td><td>Дальний</td></tr>
+                <tr><td>Meepo</td><td>Универсальный</td><td>669</td><td>331</td><td>44</td><td>1</td><td>189</td><td>298</td><td>0</td><td>Ближний</td></tr>
+                <tr><td>Mirana</td><td>Универсальный</td><td>700</td><td>348</td><td>64</td><td>2</td><td>300</td><td>311</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Monkey king</td><td>Ловкость</td><td>573</td><td>302</td><td>52</td><td>1</td><td>451</td><td>292</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Morphling</td><td>Ловкость</td><td>547</td><td>319</td><td>66</td><td>2</td><td>158</td><td>287</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Naga siren</td><td>Ловкость</td><td>578</td><td>296</td><td>54</td><td>2</td><td>354</td><td>301</td><td>9</td><td>Дальний</td></tr>
+                <tr><td>Nature's prophet</td><td>Интеллект</td><td>694</td><td>331</td><td>41</td><td>2</td><td>326</td><td>299</td><td>8</td><td>Дальний</td></tr>
+                <tr><td>Necrophos</td><td>Интеллект</td><td>675</td><td>341</td><td>47</td><td>2</td><td>447</td><td>284</td><td>9</td><td>Дальний</td></tr>
+                <tr><td>Night stalker</td><td>Сила</td><td>657</td><td>342</td><td>43</td><td>1</td><td>280</td><td>293</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Nyx assasin</td><td>Интеллект</td><td>543</td><td>305</td><td>45</td><td>2</td><td>458</td><td>297</td><td>9</td><td>Ближний</td></tr>
+                <tr><td>Ogre magi</td><td>Интеллект</td><td>744</td><td>300</td><td>63</td><td>2</td><td>390</td><td>299</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Omniknight</td><td>Универсальный</td><td>545</td><td>343</td><td>44</td><td>2</td><td>435</td><td>287</td><td>5</td><td>Ближний</td></tr>
+                <tr><td>Oracle</td><td>Интеллект</td><td>622</td><td>321</td><td>60</td><td>1</td><td>191</td><td>313</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Outworld destroyer</td><td>Интеллект</td><td>717</td><td>327</td><td>57</td><td>1</td><td>207</td><td>307</td><td>1</td><td>Дальний</td></tr>
+                <tr><td>Pangolier</td><td>Универсальный</td><td>712</td><td>294</td><td>49</td><td>1</td><td>255</td><td>292</td><td>4</td><td>Ближний</td></tr>
+                <tr><td>Phantom assasin</td><td>Ловкость</td><td>513</td><td>318</td><td>57</td><td>2</td><td>354</td><td>314</td><td>9</td><td>Дальний</td></tr>
+                <tr><td>Phantom lancer</td><td>Ловкость</td><td>664</td><td>299</td><td>52</td><td>1</td><td>308</td><td>315</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Phoenix</td><td>Интеллект</td><td>543</td><td>298</td><td>47</td><td>2</td><td>205</td><td>285</td><td>7</td><td>Дальний</td></tr>
+                <tr><td>Puck</td><td>Интеллект</td><td>548</td><td>331</td><td>57</td><td>2</td><td>211</td><td>295</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Pudge</td><td>Сила</td><td>571</td><td>332</td><td>47</td><td>1</td><td>324</td><td>293</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Pugna</td><td>Интеллект</td><td>542</td><td>339</td><td>43</td><td>1</td><td>306</td><td>308</td><td>8</td><td>Дальний</td></tr>
+                <tr><td>Queen of pain</td><td>Интеллект</td><td>617</td><td>312</td><td>42</td><td>1</td><td>311</td><td>283</td><td>7</td><td>Дальний</td></tr>
+                <tr><td>Razor</td><td>Ловкость</td><td>538</td><td>321</td><td>65</td><td>2</td><td>259</td><td>304</td><td>0</td><td>Дальний</td></tr>
+                <tr><td>Riki</td><td>Ловкость</td><td>605</td><td>322</td><td>58</td><td>1</td><td>361</td><td>310</td><td>6</td><td>Дальний</td></tr>
+                <tr><td>Rubick</td><td>Интеллект</td><td>647</td><td>333</td><td>51</td><td>1</td><td>445</td><td>297</td><td>4</td><td>Дальний</td></tr>
+                <tr><td>Sandking</td><td>Универсальный</td><td>638</td><td>342</td><td>41</td><td>1</td><td>466</td><td>295</td><td>9</td><td>Ближний</td></tr>
+                <tr><td>Shadow demon</td><td>Интеллект</td><td>545</td><td>335</td><td>64</td><td>1</td><td>301</td><td>285</td><td>1</td><td>Дальний</td></tr>
+                <tr><td>Shadow fiend</td><td>Ловкость</td><td>538</td><td>291</td><td>47</td><td>1</td><td>525</td><td>305</td><td>4</td><td>Дальний</td></tr>
+                <tr><td>Shadow shaman</td><td>Интеллект</td><td>532</td><td>307</td><td>40</td><td>1</td><td>210</td><td>289</td><td>9</td><td>Дальний</td></tr>
+                <tr><td>Silencer</td><td>Интеллект</td><td>595</td><td>293</td><td>49</td><td>2</td><td>209</td><td>305</td><td>7</td><td>Дальний</td></tr>
+                <tr><td>Skywrath mage</td><td>Интеллект</td><td>608</td><td>337</td><td>50</td><td>2</td><td>338</td><td>294</td><td>7</td><td>Дальний</td></tr>
+                <tr><td>Slardar</td><td>Сила</td><td>558</td><td>307</td><td>47</td><td>1</td><td>198</td><td>307</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Slark</td><td>Ловкость</td><td>645</td><td>296</td><td>63</td><td>1</td><td>350</td><td>305</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Sniper</td><td>Ловкость</td><td>664</td><td>349</td><td>78</td><td>2</td><td>466</td><td>310</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Spectre</td><td>Ловкость</td><td>730</td><td>302</td><td>58</td><td>1</td><td>251</td><td>317</td><td>5</td><td>Ближний</td></tr>
+                <tr><td>Spirit breaker</td><td>Сила</td><td>704</td><td>331</td><td>54</td><td>2</td><td>382</td><td>296</td><td>4</td><td>Ближний</td></tr>
+                <tr><td>Storm spirit</td><td>Интеллект</td><td>504</td><td>349</td><td>57</td><td>1</td><td>321</td><td>291</td><td>4</td><td>Дальний</td></tr>
+                <tr><td>Sven</td><td>Сила</td><td>529</td><td>340</td><td>42</td><td>1</td><td>179</td><td>298</td><td>1</td><td>Ближний</td></tr>
+                <tr><td>Techies</td><td>Универсальный</td><td>664</td><td>332</td><td>63</td><td>2</td><td>172</td><td>318</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Templar assasin</td><td>Ловкость</td><td>545</td><td>345</td><td>68</td><td>1</td><td>260</td><td>320</td><td>8</td><td>Дальний</td></tr>
+                <tr><td>Terrorblade</td><td>Ловкость</td><td>746</td><td>292</td><td>66</td><td>2</td><td>172</td><td>285</td><td>9</td><td>Дальний</td></tr>
+                <tr><td>Tidehunter</td><td>Сила</td><td>516</td><td>324</td><td>44</td><td>1</td><td>251</td><td>289</td><td>5</td><td>Ближний</td></tr>
+                <tr><td>Timbersaw</td><td>Сила</td><td>578</td><td>295</td><td>77</td><td>2</td><td>393</td><td>282</td><td>7</td><td>Ближний</td></tr>
+                <tr><td>Tinker</td><td>Интеллект</td><td>749</td><td>348</td><td>49</td><td>1</td><td>326</td><td>311</td><td>8</td><td>Дальний</td></tr>
+                <tr><td>Tiny</td><td>Сила</td><td>734</td><td>304</td><td>72</td><td>2</td><td>445</td><td>296</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Treant protector</td><td>Интеллект</td><td>549</td><td>327</td><td>71</td><td>1</td><td>359</td><td>292</td><td>9</td><td>Ближний</td></tr>
+                <tr><td>Troll warlord</td><td>Ловкость</td><td>693</td><td>306</td><td>71</td><td>1</td><td>196</td><td>291</td><td>5</td><td>Ближний</td></tr>
+                <tr><td>Tusk</td><td>Сила</td><td>713</td><td>296</td><td>54</td><td>1</td><td>311</td><td>307</td><td>0</td><td>Ближний</td></tr>
+                <tr><td>Underlord</td><td>Сила</td><td>656</td><td>303</td><td>42</td><td>1</td><td>418</td><td>281</td><td>9</td><td>Ближний</td></tr>
+                <tr><td>Undying</td><td>Сила</td><td>519</td><td>320</td><td>59</td><td>2</td><td>171</td><td>291</td><td>9</td><td>Ближний</td></tr>
+                <tr><td>Ursa</td><td>Ловкость</td><td>654</td><td>340</td><td>54</td><td>2</td><td>492</td><td>300</td><td>2</td><td>Ближний</td></tr>
+                <tr><td>Vengeful spirit</td><td>Универсальный</td><td>515</td><td>343</td><td>74</td><td>1</td><td>198</td><td>301</td><td>5</td><td>Дальний</td></tr>
+                <tr><td>Venomancer</td><td>Интеллект</td><td>592</td><td>342</td><td>77</td><td>2</td><td>361</td><td>306</td><td>4</td><td>Дальний</td></tr>
+                <tr><td>Viper</td><td>Ловкость</td><td>613</td><td>337</td><td>76</td><td>2</td><td>163</td><td>289</td><td>8</td><td>Дальний</td></tr>
+                <tr><td>Visage</td><td>Универсальный</td><td>624</td><td>342</td><td>42</td><td>1</td><td>447</td><td>304</td><td>3</td><td>Дальний</td></tr>
+                <tr><td>Warlock</td><td>Интеллект</td><td>518</td><td>299</td><td>77</td><td>1</td><td>220</td><td>282</td><td>8</td><td>Дальний</td></tr>
+                <tr><td>Weaver</td><td>Ловкость</td><td>620</td><td>302</td><td>65</td><td>1</td><td>497</td><td>280</td><td>1</td><td>Дальний</td></tr>
+                <tr><td>Wind ranger</td><td>Универсальный</td><td>736</td><td>307</td><td>40</td><td>2</td><td>230</td><td>317</td><td>9</td><td>Дальний</td></tr>
+                <tr><td>Winter wyvern</td><td>Универсальный</td><td>669</td><td>316</td><td>68</td><td>1</td><td>316</td><td>305</td><td>6</td><td>Дальний</td></tr>
+                <tr><td>Witch doctor</td><td>Интеллект</td><td>505</td><td>342</td><td>50</td><td>1</td><td>387</td><td>315</td><td>2</td><td>Дальний</td></tr>
+                <tr><td>Wraith king</td><td>Ловкость</td><td>599</td><td>297</td><td>45</td><td>1</td><td>448</td><td>298</td><td>6</td><td>Ближний</td></tr>
+                <tr><td>Zeus</td><td>Интеллект</td><td>727</td><td>308</td><td>59</td><td>2</td><td>497</td><td>293</td><td>3</td><td>Дальний</td></tr>
+            </tbody>
+        </table>
+        </p>
+        <div class="footer">
+            <div class="left">© Налимов Д. В., Б9121-09.03.04, 2023-2024</div> <div class="right"><a href="t.me/dimchiquee"><img src="img/tgicon.svg">Telegram</a></div>
+        </div>
+    </body>
+</html>
