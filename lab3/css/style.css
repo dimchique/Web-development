@@ -8,6 +8,8 @@ body{
     color: white;
     font-family: 'Jost', sans-serif;
     background-size: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 .item{
@@ -30,6 +32,14 @@ body{
     float: none;
     overflow: hidden;
     font-family: "Palatino Linotype";
+    margin: 0px auto;
+}
+header{
+    width: 100%;
+    background: url("../img/header.jpg");
+    margin: 0px;
+    padding: 0px;
+    height: 230px;
 }
 
 .active{
@@ -71,6 +81,7 @@ body{
     text-align: center;
     margin: auto;
     font-size: 25px;
+    margin-top: 40px;
 }
 
 .about-heroes{
@@ -81,7 +92,7 @@ body{
 }
 
 .about-header{
-    margin-top: 10px;
+    margin: 20px 0px;
     font-size: 2em;
 }
 
@@ -175,7 +186,7 @@ body{
 .secondcard-name{
     font-size: 50px;
 }
-.secondcard-text{
+.secondcard-text {
     margin-left: 5px; 
     width: 98%;
     overflow: hidden;
@@ -184,3 +195,5 @@ body{
     -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical; 
 }
+
+
