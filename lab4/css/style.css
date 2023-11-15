@@ -12,6 +12,74 @@ body{
     padding: 0px;
 }
 
+header{
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    background-color: #af9546;
+}
+
+.topsearch{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+    ". search";
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    background-color: grey;
+    height: 30px;
+}
+
+.topsearch .search{
+    grid-area: search;
+    width: 100%;
+    text-align: right;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+button {
+    background-color: grey;
+}
+
+
+input {
+    width: 80%;
+    padding-left: 15px;
+}
+
+.topmenu{
+    display: grid;
+    grid-template-columns: 50% repeat(3, 1fr);
+    grid-template-areas: 
+    "name menu1 menu2 menu3 ";
+    align-items: center;
+    text-align: center;
+    height: 50%;
+    font-size: 52px;
+    font-family: "Palatino Linotype";
+    margin: 0px 15px;
+}
+
+.topmenu > .name{
+    grid-area: name;
+    color: #c6c9c5;
+    text-align: start;
+}
+.topmenu > .menu1{
+    grid-area: menu1;
+}
+.topmenu > .menu2{
+    grid-area: menu2;
+}
+.topmenu > .menu3{
+    grid-area: menu3;
+}
+
 .item{
     display: inline-block;
     vertical-align: middle;
@@ -22,8 +90,8 @@ body{
 
 .itemimg{
     display: inline-block;
-    width: 100px;
-    vertical-align: top;
+    width: 80px;
+    vertical-align: middle;
     text-align: center;
 }
 
@@ -34,13 +102,7 @@ body{
     font-family: "Palatino Linotype";
     margin: 0px auto;
 }
-header{
-    width: 100%;
-    background: url("../img/header.jpg");
-    margin: 0px;
-    padding: 0px;
-    height: 230px;
-}
+
 
 .active{
     text-decoration: underline ;
@@ -195,5 +257,6 @@ header{
     -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical; 
 }
+
 
 
