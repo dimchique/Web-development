@@ -1,0 +1,67 @@
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: solid thin black;
+    background: lightgreen;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+.card{
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
+.Python{
+    grid-row: 1;
+    grid-column: 1/span 2;
+}
+
+.Java{
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.C{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.JavaScript{
+    grid-row: 2;
+    grid-column: 2/span 2;
+}
+
+.det{
+    font-weight: bold;
+}
+@media (max-width: 700px){
+    .content{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+    }
+    .Python{
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    .Java{
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .C{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .JavaScript{
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
