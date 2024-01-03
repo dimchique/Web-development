@@ -1,0 +1,150 @@
+extends template
+block variables 
+    - var title = 'Dota 2 - таблица героев'
+    - var bgpic = "img/wp_heroes.jpg"
+    - var heroesList =[{'name': 'Abbadon', 'Attribute': 'Универсальный', 'hp': '604', 'mana': '303', 'attack': '56', 'delay': '1', 'range': '150', 'speed': '325', 'armor': '3', 'attacktype': 'Ближний'}, {'name': 'Alchemist', 'Attribute': 'Сила', 'hp': '626', 'mana': '375', 'attack': '55', 'delay': '2', 'range': '150', 'speed': '295', 'armor': '4', 'attacktype': 'Ближний'}, {'name': 'Ancient apparation', 'Attribute': 'Интеллект', 'hp': '560', 'mana': '351', 'attack': '54', 'delay': '2', 'range': '675', 'speed': '285', 'armor': '2', 'attacktype': 'Дальний'}, {'name': 'Antimage', 'Attribute': 'Ловкость', 'hp': '538', 'mana': '219', 'attack': '57', 'delay': '1', 'range': '150', 'speed': '310', 'armor': '5', 'attacktype': 'Ближний'}, {'name': 'Arc warden', 'Attribute': 'Ловкость', 'hp': '604', 'mana': '363', 'attack': '56', 'delay': '1', 'range': '625', 'speed': '285', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Axe', 'Attribute': 'Сила', 'hp': '670', 'mana': '291', 'attack': '59', 'delay': '2', 'range': '150', 'speed': '315', 'armor': '2', 'attacktype': 'Дальний'}, {'name': 'Bane', 'Attribute': 'Универсальный', 'hp': '626', 'mana': '351', 'attack': '53', 'delay': '2', 'range': '400', 'speed': '305', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Batrider', 'Attribute': 'Универсальный', 'hp': '736', 'mana': '339', 'attack': '45', 'delay': '2', 'range': '400', 'speed': '330', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Beastmaster', 'Attribute': 'Универсальный', 'hp': '670', 'mana': '267', 'attack': '48', 'delay': '1', 'range': '150', 'speed': '305', 'armor': '2', 'attacktype': 'Ближний'}, {'name': 'Bloodseeker', 'Attribute': 'Ловкость', 'hp': '648', 'mana': '279', 'attack': '63', 'delay': '2', 'range': '150', 'speed': '300', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Bounty hunter', 'Attribute': 'Ловкость', 'hp': '538', 'mana': '339', 'attack': '62', 'delay': '2', 'range': '150', 'speed': '325', 'armor': '9', 'attacktype': 'Ближний'}, {'name': 'Brewmaster', 'Attribute': 'Универсальный', 'hp': '626', 'mana': '255', 'attack': '55', 'delay': '2', 'range': '150', 'speed': '310', 'armor': '3', 'attacktype': 'Ближний'}, {'name': 'Bristleback', 'Attribute': 'Сила', 'hp': '604', 'mana': '243', 'attack': '61', 'delay': '1', 'range': '150', 'speed': '295', 'armor': '4', 'attacktype': 'Ближний'}, {'name': 'Broodmother', 'Attribute': 'Универсальный', 'hp': '538', 'mana': '291', 'attack': '53', 'delay': '2', 'range': '175', 'speed': '285', 'armor': '2', 'attacktype': 'Ближний'}, {'name': 'Centaur warruner', 'Attribute': 'Сила', 'hp': '714', 'mana': '255', 'attack': '65', 'delay': '2', 'range': '150', 'speed': '310', 'armor': '0', 'attacktype': 'Ближний'}, {'name': 'Chaos knight', 'Attribute': 'Сила', 'hp': '648', 'mana': '291', 'attack': '83', 'delay': '2', 'range': '150', 'speed': '325', 'armor': '5', 'attacktype': 'Ближний'}, {'name': 'Chen', 'Attribute': 'Универсальный', 'hp': '626', 'mana': '303', 'attack': '55', 'delay': '1', 'range': '650', 'speed': '305', 'armor': '1', 'attacktype': 'Дальний'}, {'name': 'Clinkz', 'Attribute': 'Ловкость', 'hp': '494', 'mana': '327', 'attack': '50', 'delay': '2', 'range': '600', 'speed': '290', 'armor': '4', 'attacktype': 'Дальний'}, {'name': 'Clockwerk', 'Attribute': 'Универсальный', 'hp': '714', 'mana': '291', 'attack': '50', 'delay': '2', 'range': '150', 'speed': '310', 'armor': '3', 'attacktype': 'Ближний'}, {'name': 'Crystal maiden', 'Attribute': 'Интеллект', 'hp': '494', 'mana': '291', 'attack': '54', 'delay': '2', 'range': '600', 'speed': '280', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Dark seer', 'Attribute': 'Универсальный', 'hp': '604', 'mana': '327', 'attack': '56', 'delay': '2', 'range': '150', 'speed': '295', 'armor': '5', 'attacktype': 'Ближний'}, {'name': 'Dark willow', 'Attribute': 'Универсальный', 'hp': '560', 'mana': '327', 'attack': '54', 'delay': '1', 'range': '475', 'speed': '290', 'armor': '2', 'attacktype': 'Дальний'}, {'name': 'Dazzle', 'Attribute': 'Универсальный', 'hp': '516', 'mana': '375', 'attack': '53', 'delay': '1', 'range': '575', 'speed': '305', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Death prophet', 'Attribute': 'Интеллект', 'hp': '582', 'mana': '363', 'attack': '57', 'delay': '1', 'range': '600', 'speed': '290', 'armor': '4', 'attacktype': 'Дальний'}, {'name': 'Disruptor', 'Attribute': 'Интеллект', 'hp': '582', 'mana': '315', 'attack': '51', 'delay': '2', 'range': '625', 'speed': '295', 'armor': '2', 'attacktype': 'Дальний'}, {'name': 'Doom', 'Attribute': 'Сила', 'hp': '648', 'mana': '255', 'attack': '68', 'delay': '2', 'range': '200', 'speed': '285', 'armor': '4', 'attacktype': 'Ближний'}, {'name': 'Dragon knight', 'Attribute': 'Сила', 'hp': '582', 'mana': '291', 'attack': '61', 'delay': '1', 'range': '150', 'speed': '315', 'armor': '3', 'attacktype': 'Ближний'}, {'name': 'Drow ranger', 'Attribute': 'Ловкость', 'hp': '472', 'mana': '255', 'attack': '56', 'delay': '2', 'range': '625', 'speed': '300', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Earth spirit', 'Attribute': 'Сила', 'hp': '604', 'mana': '291', 'attack': '57', 'delay': '2', 'range': '150', 'speed': '290', 'armor': '2', 'attacktype': 'Ближний'}, {'name': 'Earthshaker', 'Attribute': 'Сила', 'hp': '604', 'mana': '291', 'attack': '59', 'delay': '2', 'range': '150', 'speed': '315', 'armor': '4', 'attacktype': 'Ближний'}, {'name': 'Elder titan', 'Attribute': 'Сила', 'hp': '692', 'mana': '351', 'attack': '59', 'delay': '2', 'range': '150', 'speed': '310', 'armor': '2', 'attacktype': 'Ближний'}, {'name': 'Ember spirit', 'Attribute': 'Ловкость', 'hp': '604', 'mana': '315', 'attack': '59', 'delay': '1', 'range': '150', 'speed': '300', 'armor': '4', 'attacktype': 'Ближний'}, {'name': 'Enchantress', 'Attribute': 'Интеллект', 'hp': '494', 'mana': '339', 'attack': '53', 'delay': '1', 'range': '575', 'speed': '320', 'armor': '4', 'attacktype': 'Дальний'}, {'name': 'Enigma', 'Attribute': 'Универсальный', 'hp': '582', 'mana': '303', 'attack': '50', 'delay': '1', 'range': '500', 'speed': '290', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Faceless void', 'Attribute': 'Ловкость', 'hp': '560', 'mana': '255', 'attack': '63', 'delay': '2', 'range': '150', 'speed': '300', 'armor': '4', 'attacktype': 'Ближний'}, {'name': 'Grimstroke', 'Attribute': 'Интеллект', 'hp': '582', 'mana': '375', 'attack': '50', 'delay': '2', 'range': '600', 'speed': '290', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Gyrocopter', 'Attribute': 'Ловкость', 'hp': '604', 'mana': '327', 'attack': '48', 'delay': '1', 'range': '365', 'speed': '320', 'armor': '6', 'attacktype': 'Дальний'}, {'name': 'Huskar', 'Attribute': 'Сила', 'hp': '626', 'mana': '291', 'attack': '49', 'delay': '2', 'range': '400', 'speed': '295', 'armor': '2', 'attacktype': 'Дальний'}, {'name': 'Invoker', 'Attribute': 'Универсальный', 'hp': '665', 'mana': '293', 'attack': '56', 'delay': '2', 'range': '420', 'speed': '298', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Io', 'Attribute': 'Интеллект', 'hp': '535', 'mana': '318', 'attack': '65', 'delay': '1', 'range': '497', 'speed': '298', 'armor': '9', 'attacktype': 'Дальний'}, {'name': 'Jakiro', 'Attribute': 'Интеллект', 'hp': '535', 'mana': '338', 'attack': '75', 'delay': '1', 'range': '260', 'speed': '310', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Juggernaut', 'Attribute': 'Ловкость', 'hp': '506', 'mana': '329', 'attack': '59', 'delay': '2', 'range': '210', 'speed': '308', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Keeper of the light', 'Attribute': 'Интеллект', 'hp': '736', 'mana': '293', 'attack': '68', 'delay': '1', 'range': '486', 'speed': '288', 'armor': '1', 'attacktype': 'Дальний'}, {'name': 'Kunkka', 'Attribute': 'Сила', 'hp': '519', 'mana': '314', 'attack': '49', 'delay': '2', 'range': '178', 'speed': '316', 'armor': '8', 'attacktype': 'Ближний'}, {'name': 'Legion commander', 'Attribute': 'Сила', 'hp': '586', 'mana': '349', 'attack': '54', 'delay': '2', 'range': '384', 'speed': '314', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Leshrac', 'Attribute': 'Интеллект', 'hp': '640', 'mana': '314', 'attack': '52', 'delay': '2', 'range': '283', 'speed': '303', 'armor': '0', 'attacktype': 'Дальний'}, {'name': 'Lich', 'Attribute': 'Интеллект', 'hp': '574', 'mana': '300', 'attack': '46', 'delay': '2', 'range': '409', 'speed': '295', 'armor': '2', 'attacktype': 'Дальний'}, {'name': 'Lifestealer', 'Attribute': 'Ловкость', 'hp': '508', 'mana': '320', 'attack': '58', 'delay': '2', 'range': '304', 'speed': '294', 'armor': '9', 'attacktype': 'Ближний'}, {'name': 'Lina', 'Attribute': 'Интеллект', 'hp': '556', 'mana': '343', 'attack': '62', 'delay': '2', 'range': '276', 'speed': '280', 'armor': '7', 'attacktype': 'Дальний'}, {'name': 'Lion', 'Attribute': 'Интеллект', 'hp': '702', 'mana': '303', 'attack': '47', 'delay': '2', 'range': '360', 'speed': '301', 'armor': '4', 'attacktype': 'Дальний'}, {'name': 'Lone druid', 'Attribute': 'Универсальный', 'hp': '687', 'mana': '329', 'attack': '57', 'delay': '1', 'range': '190', 'speed': '297', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Luna', 'Attribute': 'Интеллект', 'hp': '736', 'mana': '321', 'attack': '41', 'delay': '2', 'range': '361', 'speed': '319', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Lycan', 'Attribute': 'Универсальный', 'hp': '609', 'mana': '313', 'attack': '44', 'delay': '1', 'range': '286', 'speed': '287', 'armor': '6', 'attacktype': 'Дальний'}, {'name': 'Magnus', 'Attribute': 'Универсальный', 'hp': '581', 'mana': '327', 'attack': '75', 'delay': '2', 'range': '320', 'speed': '307', 'armor': '5', 'attacktype': 'Ближний'}, {'name': 'Medusa', 'Attribute': 'Ловкость', 'hp': '680', 'mana': '331', 'attack': '47', 'delay': '2', 'range': '170', 'speed': '308', 'armor': '6', 'attacktype': 'Дальний'}, {'name': 'Meepo', 'Attribute': 'Универсальный', 'hp': '669', 'mana': '331', 'attack': '44', 'delay': '1', 'range': '189', 'speed': '298', 'armor': '0', 'attacktype': 'Ближний'}, {'name': 'Mirana', 'Attribute': 'Универсальный', 'hp': '700', 'mana': '348', 'attack': '64', 'delay': '2', 'range': '300', 'speed': '311', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Monkey king', 'Attribute': 'Ловкость', 'hp': '573', 'mana': '302', 'attack': '52', 'delay': '1', 'range': '451', 'speed': '292', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Morphling', 'Attribute': 'Ловкость', 'hp': '547', 'mana': '319', 'attack': '66', 'delay': '2', 'range': '158', 'speed': '287', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Naga siren', 'Attribute': 'Ловкость', 'hp': '578', 'mana': '296', 'attack': '54', 'delay': '2', 'range': '354', 'speed': '301', 'armor': '9', 'attacktype': 'Дальний'}, {'name': "Nature's prophet", 'Attribute': 'Интеллект', 'hp': '694', 'mana': '331', 'attack': '41', 'delay': '2', 'range': '326', 'speed': '299', 'armor': '8', 'attacktype': 'Дальний'}, {'name': 'Necrophos', 'Attribute': 'Интеллект', 'hp': '675', 'mana': '341', 'attack': '47', 'delay': '2', 'range': '447', 'speed': '284', 'armor': '9', 'attacktype': 'Дальний'}, {'name': 'Night stalker', 'Attribute': 'Сила', 'hp': '657', 'mana': '342', 'attack': '43', 'delay': '1', 'range': '280', 'speed': '293', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Nyx assasin', 'Attribute': 'Интеллект', 'hp': '543', 'mana': '305', 'attack': '45', 'delay': '2', 'range': '458', 'speed': '297', 'armor': '9', 'attacktype': 'Ближний'}, {'name': 'Ogre magi', 'Attribute': 'Интеллект', 'hp': '744', 'mana': '300', 'attack': '63', 'delay': '2', 'range': '390', 'speed': '299', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Omniknight', 'Attribute': 'Универсальный', 'hp': '545', 'mana': '343', 'attack': '44', 'delay': '2', 'range': '435', 'speed': '287', 'armor': '5', 'attacktype': 'Ближний'}, {'name': 'Oracle', 'Attribute': 'Интеллект', 'hp': '622', 'mana': '321', 'attack': '60', 'delay': '1', 'range': '191', 'speed': '313', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Outworld destroyer', 'Attribute': 'Интеллект', 'hp': '717', 'mana': '327', 'attack': '57', 'delay': '1', 'range': '207', 'speed': '307', 'armor': '1', 'attacktype': 'Дальний'}, {'name': 'Pangolier', 'Attribute': 'Универсальный', 'hp': '712', 'mana': '294', 'attack': '49', 'delay': '1', 'range': '255', 'speed': '292', 'armor': '4', 'attacktype': 'Ближний'}, {'name': 'Phantom assasin', 'Attribute': 'Ловкость', 'hp': '513', 'mana': '318', 'attack': '57', 'delay': '2', 'range': '354', 'speed': '314', 'armor': '9', 'attacktype': 'Дальний'}, {'name': 'Phantom lancer', 'Attribute': 'Ловкость', 'hp': '664', 'mana': '299', 'attack': '52', 'delay': '1', 'range': '308', 'speed': '315', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Phoenix', 'Attribute': 'Интеллект', 'hp': '543', 'mana': '298', 'attack': '47', 'delay': '2', 'range': '205', 'speed': '285', 'armor': '7', 'attacktype': 'Дальний'}, {'name': 'Puck', 'Attribute': 'Интеллект', 'hp': '548', 'mana': '331', 'attack': '57', 'delay': '2', 'range': '211', 'speed': '295', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Pudge', 'Attribute': 'Сила', 'hp': '571', 'mana': '332', 'attack': '47', 'delay': '1', 'range': '324', 'speed': '293', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Pugna', 'Attribute': 'Интеллект', 'hp': '542', 'mana': '339', 'attack': '43', 'delay': '1', 'range': '306', 'speed': '308', 'armor': '8', 'attacktype': 'Дальний'}, {'name': 'Queen of pain', 'Attribute': 'Интеллект', 'hp': '617', 'mana': '312', 'attack': '42', 'delay': '1', 'range': '311', 'speed': '283', 'armor': '7', 'attacktype': 'Дальний'}, {'name': 'Razor', 'Attribute': 'Ловкость', 'hp': '538', 'mana': '321', 'attack': '65', 'delay': '2', 'range': '259', 'speed': '304', 'armor': '0', 'attacktype': 'Дальний'}, {'name': 'Riki', 'Attribute': 'Ловкость', 'hp': '605', 'mana': '322', 'attack': '58', 'delay': '1', 'range': '361', 'speed': '310', 'armor': '6', 'attacktype': 'Дальний'}, {'name': 'Rubick', 'Attribute': 'Интеллект', 'hp': '647', 'mana': '333', 'attack': '51', 'delay': '1', 'range': '445', 'speed': '297', 'armor': '4', 'attacktype': 'Дальний'}, {'name': 'Sandking', 'Attribute': 'Универсальный', 'hp': '638', 'mana': '342', 'attack': '41', 'delay': '1', 'range': '466', 'speed': '295', 'armor': '9', 'attacktype': 'Ближний'}, {'name': 'Shadow demon', 'Attribute': 'Интеллект', 'hp': '545', 'mana': '335', 'attack': '64', 'delay': '1', 'range': '301', 'speed': '285', 'armor': '1', 'attacktype': 'Дальний'}, {'name': 'Shadow fiend', 'Attribute': 'Ловкость', 'hp': '538', 'mana': '291', 'attack': '47', 'delay': '1', 'range': '525', 'speed': '305', 'armor': '4', 'attacktype': 'Дальний'}, {'name': 'Shadow shaman', 'Attribute': 'Интеллект', 'hp': '532', 'mana': '307', 'attack': '40', 'delay': '1', 'range': '210', 'speed': '289', 'armor': '9', 'attacktype': 'Дальний'}, {'name': 'Silencer', 'Attribute': 'Интеллект', 'hp': '595', 'mana': '293', 'attack': '49', 'delay': '2', 'range': '209', 'speed': '305', 'armor': '7', 'attacktype': 'Дальний'}, {'name': 'Skywrath mage', 'Attribute': 'Интеллект', 'hp': '608', 'mana': '337', 'attack': '50', 'delay': '2', 'range': '338', 'speed': '294', 'armor': '7', 'attacktype': 'Дальний'}, {'name': 'Slardar', 'Attribute': 'Сила', 'hp': '558', 'mana': '307', 'attack': '47', 'delay': '1', 'range': '198', 'speed': '307', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Slark', 'Attribute': 'Ловкость', 'hp': '645', 'mana': '296', 'attack': '63', 'delay': '1', 'range': '350', 'speed': '305', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Sniper', 'Attribute': 'Ловкость', 'hp': '664', 'mana': '349', 'attack': '78', 'delay': '2', 'range': '466', 'speed': '310', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Spectre', 'Attribute': 'Ловкость', 'hp': '730', 'mana': '302', 'attack': '58', 'delay': '1', 'range': '251', 'speed': '317', 'armor': '5', 'attacktype': 'Ближний'}, {'name': 'Spirit breaker', 'Attribute': 'Сила', 'hp': '704', 'mana': '331', 'attack': '54', 'delay': '2', 'range': '382', 'speed': '296', 'armor': '4', 'attacktype': 'Ближний'}, {'name': 'Storm spirit', 'Attribute': 'Интеллект', 'hp': '504', 'mana': '349', 'attack': '57', 'delay': '1', 'range': '321', 'speed': '291', 'armor': '4', 'attacktype': 'Дальний'}, {'name': 'Sven', 'Attribute': 'Сила', 'hp': '529', 'mana': '340', 'attack': '42', 'delay': '1', 'range': '179', 'speed': '298', 'armor': '1', 'attacktype': 'Ближний'}, {'name': 'Techies', 'Attribute': 'Универсальный', 'hp': '664', 'mana': '332', 'attack': '63', 'delay': '2', 'range': '172', 'speed': '318', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Templar assasin', 'Attribute': 'Ловкость', 'hp': '545', 'mana': '345', 'attack': '68', 'delay': '1', 'range': '260', 'speed': '320', 'armor': '8', 'attacktype': 'Дальний'}, {'name': 'Terrorblade', 'Attribute': 'Ловкость', 'hp': '746', 'mana': '292', 'attack': '66', 'delay': '2', 'range': '172', 'speed': '285', 'armor': '9', 'attacktype': 'Дальний'}, {'name': 'Tidehunter', 'Attribute': 'Сила', 'hp': '516', 'mana': '324', 'attack': '44', 'delay': '1', 'range': '251', 'speed': '289', 'armor': '5', 'attacktype': 'Ближний'}, {'name': 'Timbersaw', 'Attribute': 'Сила', 'hp': '578', 'mana': '295', 'attack': '77', 'delay': '2', 'range': '393', 'speed': '282', 'armor': '7', 'attacktype': 'Ближний'}, {'name': 'Tinker', 'Attribute': 'Интеллект', 'hp': '749', 'mana': '348', 'attack': '49', 'delay': '1', 'range': '326', 'speed': '311', 'armor': '8', 'attacktype': 'Дальний'}, {'name': 'Tiny', 'Attribute': 'Сила', 'hp': '734', 'mana': '304', 'attack': '72', 'delay': '2', 'range': '445', 'speed': '296', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Treant protector', 'Attribute': 'Интеллект', 'hp': '549', 'mana': '327', 'attack': '71', 'delay': '1', 'range': '359', 'speed': '292', 'armor': '9', 'attacktype': 'Ближний'}, {'name': 'Troll warlord', 'Attribute': 'Ловкость', 'hp': '693', 'mana': '306', 'attack': '71', 'delay': '1', 'range': '196', 'speed': '291', 'armor': '5', 'attacktype': 'Ближний'}, {'name': 'Tusk', 'Attribute': 'Сила', 'hp': '713', 'mana': '296', 'attack': '54', 'delay': '1', 'range': '311', 'speed': '307', 'armor': '0', 'attacktype': 'Ближний'}, {'name': 'Underlord', 'Attribute': 'Сила', 'hp': '656', 'mana': '303', 'attack': '42', 'delay': '1', 'range': '418', 'speed': '281', 'armor': '9', 'attacktype': 'Ближний'}, {'name': 'Undying', 'Attribute': 'Сила', 'hp': '519', 'mana': '320', 'attack': '59', 'delay': '2', 'range': '171', 'speed': '291', 'armor': '9', 'attacktype': 'Ближний'}, {'name': 'Ursa', 'Attribute': 'Ловкость', 'hp': '654', 'mana': '340', 'attack': '54', 'delay': '2', 'range': '492', 'speed': '300', 'armor': '2', 'attacktype': 'Ближний'}, {'name': 'Vengeful spirit', 'Attribute': 'Универсальный', 'hp': '515', 'mana': '343', 'attack': '74', 'delay': '1', 'range': '198', 'speed': '301', 'armor': '5', 'attacktype': 'Дальний'}, {'name': 'Venomancer', 'Attribute': 'Интеллект', 'hp': '592', 'mana': '342', 'attack': '77', 'delay': '2', 'range': '361', 'speed': '306', 'armor': '4', 'attacktype': 'Дальний'}, {'name': 'Viper', 'Attribute': 'Ловкость', 'hp': '613', 'mana': '337', 'attack': '76', 'delay': '2', 'range': '163', 'speed': '289', 'armor': '8', 'attacktype': 'Дальний'}, {'name': 'Visage', 'Attribute': 'Универсальный', 'hp': '624', 'mana': '342', 'attack': '42', 'delay': '1', 'range': '447', 'speed': '304', 'armor': '3', 'attacktype': 'Дальний'}, {'name': 'Warlock', 'Attribute': 'Интеллект', 'hp': '518', 'mana': '299', 'attack': '77', 'delay': '1', 'range': '220', 'speed': '282', 'armor': '8', 'attacktype': 'Дальний'}, {'name': 'Weaver', 'Attribute': 'Ловкость', 'hp': '620', 'mana': '302', 'attack': '65', 'delay': '1', 'range': '497', 'speed': '280', 'armor': '1', 'attacktype': 'Дальний'}, {'name': 'Wind ranger', 'Attribute': 'Универсальный', 'hp': '736', 'mana': '307', 'attack': '40', 'delay': '2', 'range': '230', 'speed': '317', 'armor': '9', 'attacktype': 'Дальний'}, {'name': 'Winter wyvern', 'Attribute': 'Универсальный', 'hp': '669', 'mana': '316', 'attack': '68', 'delay': '1', 'range': '316', 'speed': '305', 'armor': '6', 'attacktype': 'Дальний'}, {'name': 'Witch doctor', 'Attribute': 'Интеллект', 'hp': '505', 'mana': '342', 'attack': '50', 'delay': '1', 'range': '387', 'speed': '315', 'armor': '2', 'attacktype': 'Дальний'}, {'name': 'Wraith king', 'Attribute': 'Ловкость', 'hp': '599', 'mana': '297', 'attack': '45', 'delay': '1', 'range': '448', 'speed': '298', 'armor': '6', 'attacktype': 'Ближний'}, {'name': 'Zeus', 'Attribute': 'Интеллект', 'hp': '727', 'mana': '308', 'attack': '59', 'delay': '2', 'range': '497', 'speed': '293', 'armor': '3', 'attacktype': 'Дальний'}]
+    - var headers = ['Имя персонажа', 'Атрибут', 'Количество здоровья', 'Количество маны', 'Атака', 'Задержка перед атакой', 'Дальность атаки', 'Скорость передвижения', 'Броня', 'Тип атаки']
+block content
+    p
+        details
+            summary Построение графика
+            form
+                p 
+                    | Значение по оси OX:
+                    br
+                    label 
+                        input.input(type="radio", name="graph",value="attribute")
+                        | Имя персонажа 
+                    br
+                    label
+                        input.input(type="radio", name="graph",value="attacktype")
+                        | Атрибут
+                    br
+                    label 
+                        input.input(type="radio", name="graph",value="attackdelay")
+                        | Задержка перед атакой 
+                    br
+                p Результат:
+                    br
+                    label
+                        input.input(type="checkbox", name="graph", value="minhp")
+                        | Минимальное количество здоровья
+                    br
+                    label  
+                        input.input(type="checkbox", name="graph", value="avghp")
+                        | Среднее количество здоровья
+                        br
+                    label 
+                        input.input(type="checkbox", name="graph", value="maxhp") 
+                        | Максимальное количество здоровья
+                        br
+                    label 
+                        input.input(type="checkbox", name="graph", value="heroesamount") 
+                        | Количество персонажей
+                        br
+                    label 
+                        input.input(type="checkbox", name="graph", value="minmana") 
+                        | Минимальное количество маны
+                        br
+                    label 
+                        input.input(type="checkbox", name="graph", value="avgmana")
+                        | Среднее количество маны 
+                        br
+                    label 
+                        input.input(type="checkbox", name="graph", value="maxmana") 
+                        | Максимальное количество маны
+                        br
+                    label 
+                        input.input(type="checkbox", name="graph", value="mindmg") 
+                        | Минимальная атака
+                        br
+                    label 
+                        input.input(type="checkbox", name="graph", value="avgdmg")
+                        | Средняя атака 
+                        br
+                    label 
+                        input.input(type="checkbox", name="graph", value="maxdmg") 
+                        | Максимальная атака
+                        br
+                br
+                p
+                    input.btn(type="button" value="Сортировать")
+                    input.btn(type="reset" value="Сбросить настройки")
+    p
+        details
+            summary Фильтр
+            form
+                p
+                    label Имя персонажа: 
+                        input.input(type="text")
+                        br
+                    label Атрибут: 
+                        input.input(type="text")
+                        br
+                    label Количество здоровья: 
+                        | от
+                        input.input(type="text")
+                        | до 
+                        input.input(type="text")
+                        br
+                    label Количество маны: 
+                        | от
+                        input.input(type="text")
+                        | до 
+                        input.input(type="text")
+                        br
+                    label Атака: 
+                        | от
+                        input.input(type="text")
+                        | до 
+                        input.input(type="text")
+                        br
+            
+                p
+                    input.btn(type="button" value="Сортировать")
+                    input.btn(type="reset" value="Сбросить настройки")
+    p
+        details
+            summary Сортировка
+            form
+                p Первый уровень:
+                    select
+                        each header in headers 
+                            option= header
+                    select
+                        option По возрастанию
+                        option По убыванию
+                p Второй уровень:
+                    select
+                        each header in headers 
+                            option= header
+                    select
+                        option По возрастанию
+                        option По убыванию
+
+                p Третий уровень:
+                    select
+                        each header in headers 
+                            option= header
+                    select
+                        option По возрастанию
+                        option По убыванию
+                p
+                    input.btn(type="button" value="Сортировать")
+                    input.btn(type="reset" value="Сбросить настройки")
+    table.table(border="2")
+        tr
+            each header in headers 
+                th= header
+        each item in heroesList
+            tr
+                td= item.name
+                td= item.Attribute
+                td= item.hp
+                td= item.mana
+                td= item.attack
+                td= item.delay
+                td= item.range
+                td= item.speed
+                td= item.armor
+                td= item.attacktype

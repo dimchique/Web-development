@@ -1,0 +1,52 @@
+block variables
+- var name = 'Dota 2'
+-
+    var menu = {
+        'Главная': "index.html",
+        'Герои': "heroes.html",
+        'Информация о героях': "table.html"
+        }
+mixin createMenu(menu)
+    each value, key in menu
+        if active == key
+            a.active(href= value)= key 
+        else 
+            a(href= value)= key
+doctype html
+html(lang="ru")
+    head
+        meta(charset='utf-8')
+        title #{title} 
+        link(rel='icon' type='image/png' href='img/dota2icon.png' sizes='16x16')
+        link(rel='stylesheet' type='text/css' href='css/main.css')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Jost&display=swap' rel='stylesheet')
+    body(background=bgpic, no-repeat)
+        block header
+            header
+                .topsearch
+                    .search
+                        form(action= "", method="get")
+                            input(name="search", placeholder="Искать здесь...", type="search")
+                            button(type="submit")
+                                searchsymbol #{searchsymbol}
+                nav
+                    name #{name}
+                    +createMenu(menu)
+                    
+    block content
+    br
+    block footer
+        footer
+            .copyright © Налимов Д. В., Б9121-09.03.04, 2023-2024
+            .telegram
+                a(href="https://t.me/dimchiquee")
+                    img(src="img/tgicon.svg" width="24px")
+            .telegram telegram
+                
+                
+
+
+    
+
