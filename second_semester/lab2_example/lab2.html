@@ -1,0 +1,40 @@
+<html >
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="lab2.css">
+</head>
+<body>
+ <div class="task">
+ <img src="pict1.png">
+ <div class="input">
+ <form>
+ <p>
+ <label>
+    h =
+ <input type="number" id="input1" min=0 max=200>
+ </label>
+ </p>
+ <p>
+ <label>
+    a =
+ <input type="number" id="input2" min=0 max=200>
+ </label>
+ </p>
+ <p>
+ <span id="find">Найти: </span><br>
+ <label><input type="checkbox" id="task1" onClick="clearResult(this.form)"> площадь</label></br>
+ <label><input type="checkbox" id="task2" onClick="clearResult(this.form)"> объём</label>
+ </p>
+ <p>
+ <input type="button" value="Вычислить" onClick="calculate(this.form)">
+ <input type="button" value="Очистить" onClick="clearData(this.form)">
+ </p>
+ </form>
+ </div>
+ <div id="output">
+ </div>
+ </div>
+</body>
+<script src="lab2.js"> </script>
+</html>
+    

@@ -1,0 +1,46 @@
+<html>
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="lab2.css">
+</head>
+<body>
+   <div id="task">
+      <div id="input">
+         <form>
+            
+            <p>
+               <span id="inputData">Выберите входные данные: </span><br>
+               <label><input type="radio" id="start1" name="inputData" value="side" checked> основания трапеции и боковая
+                  сторона</label>
+               <label><input type="radio" id="start2" name="inputData" value="height"> основания трапеции и
+                  высота</label>
+               <br>
+            </p>
+            <p>
+               <input type="button" value="Показать" onClick="showInputs(this.form)">
+            </p>
+            <p id="inputImg"><img src="pict1.png" width="400px"></p>
+            <div id="chooseInputData">
+               <p>Входные данные:</p>
+               <p><label><input type="number" id="osn1" min=0 max=200> основание a</label></p>
+               <p><label><input type="number" id="osn2" min=0 max=200> основание b</label></p>
+               <p><label><input type="number" id="side" min=0 max=200> боковая сторона c</label></p>
+            </div>
+            <p>
+               <span id="find">Найти: </span><br>
+               <label><input type="checkbox" id="task1" onClick="clearResult(this.form)"> высота</label>
+               <label><input type="checkbox" id="task2" onClick="clearResult(this.form)"> периметр</label>
+               <label><input type="checkbox" id="task3" onClick="clearResult(this.form)"> диагонали</label>
+            </p>
+            <p>
+               <input type="button" value="Вычислить" onClick="calculate(this.form)">
+               <input type="button" value="Очистить" onClick="clearData(this.form)">
+            </p>
+         </form>
+      </div>
+      <div id="output">
+      </div>
+   </div>
+</body>
+<script src="lab2.js"> </script>
+</html>
