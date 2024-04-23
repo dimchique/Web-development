@@ -1,0 +1,12 @@
+#list{
+    background-color: #c0c0c0;
+}
+th{
+    background-color: #acacac;
+}
+tr{
+    background-color: #dbdbdb;
+}
+#list td{
+    padding: 5px;
+}
