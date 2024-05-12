@@ -1,0 +1,19 @@
+table{
+    background-color: #c0c0c0;
+}
+th{
+    background-color: #acacac;
+    padding: 5px;
+    margin: 5px;
+}
+tr{
+    background-color: #dbdbdb;
+}
+td{
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+}
+#changeButton{
+    margin: 5px;
+}
