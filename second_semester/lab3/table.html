@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dota 2 - таблица героев</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="img/dota2icon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+</head>
+
+<body background="img/wp_heroes.jpg">
+    <header>
+        <div class="topmenu">
+            <div class="name">DOTA 2</div>
+            <div class="menu1"><a href="index.html"><img src="img/dotamenuicon.jpg" class="itemimg"></a></div>
+            <div class="menu2"><a href="heroes.html">Герои</a></div>
+            <div class="menu3"><a href="table.html">Информация</a></div>
+        </div>
+    </header>
+    <p>
+    <details>
+        <p>
+            <summary>Построение графика</summary>
+        </p>
+        <form>
+            <p>
+                Значение по оси OX:<br>
+                <label><input type="radio" name="graph" value="attribute">Атрибут</label><br>
+                <label><input type="radio" name="graph" value="attacktype">Тип атаки</label><br>
+                <label><input type="radio" name="graph" value="attackdelay">Задержка перед атакой</label><br>
+            </p>
+            <p>
+                Результат:<br>
+                <label><input type="checkbox" name="graph" value="minhp">Минимальное количество здоровья</label><br>
+                <label><input type="checkbox" name="graph" value="avghp">Среднее количество здоровья</label><br>
+                <label><input type="checkbox" name="graph" value="maxhp">Максимальное количество здоровья</label><br>
+                <label><input type="checkbox" name="graph" value="heroesamount">Количество персонажей</label><br>
+                <label><input type="checkbox" name="graph" value="minmana">Минимальное количество маны</label><br>
+                <label><input type="checkbox" name="graph" value="avgmana">Среднее количество маны</label><br>
+                <label><input type="checkbox" name="graph" value="maxmana">Максимальное количество маны</label><br>
+                <label><input type="checkbox" name="graph" value="mindmg">Минимальная атака</label><br>
+                <label><input type="checkbox" name="graph" value="avgdmg">Средняя атака</label><br>
+                <label><input type="checkbox" name="graph" value="maxdmg">Максимальная атака</label><br>
+            </p>
+            <p>
+                <input type="button" value="Построить">
+                <input type="reset" value="Сбросить настройки">
+            </p>
+        </form>
+    </details>
+    </p>
+    <p>
+    <details>
+        <p>
+            <summary>Фильтр</summary>
+        </p>
+    <form id="filter">                
+                <p>
+                <label for="name">Имя персонажа:</label>
+                <input type="text" id="name">
+                </p>
+                <p>
+                <label for="attribute">Атрибут: </label>
+                <input type="text" id="attribute">
+                </p>
+                <p>
+                <label for="hpFrom">Количество здоровья: </label>
+                    от <input type="number" id="hpFrom"> 
+                    до <input type="number" id="hpTo">
+                </p>
+                <p>
+                <label for="manaFrom">Количество маны: </label>
+                    от <input type="number" id="manaFrom"> 
+                    до <input type="number" id="manaTo">
+                </p>
+                <p>
+                <label for="attackFrom">Атака: </label>
+                    от <input type="number" id="attackFrom"> 
+                    до <input type="number" id="attackTo">
+                </p>
+                <p>
+                <label for="delayFrom">Задержка перед атакой: </label>
+                    от <input type="number" id="delayFrom"> 
+                    до <input type="number" id="delayTo">
+                </p>
+                <p>
+                <label for="rangeFrom">Дальность атаки: </label>
+                    от <input type="number" id="rangeFrom"> 
+                    до <input type="number" id="rangeTo">
+                </p>
+                <p>
+                <label for="msFrom">Скорость передвижения: </label>
+                    от <input type="number" id="msFrom"> 
+                    до <input type="number" id="msTo">
+                </p>
+                <p>
+                <label for="armorFrom">Броня: </label>
+                    от <input type="number" id="armorFrom"> 
+                    до <input type="number" id="armorTo">
+                </p>
+                <p>
+                <label for="attackType">Тип атаки: </label>
+                <input type="text" id="attackType">
+                </p>
+            <input type="button" value="Найти" id="find">
+            <input type="button" value="Очистить фильтры" id="clearFilters">
+    </form>
+    </details>
+    </p>
+    <p>
+    <details>
+        <summary>Сортировка</summary>
+        <form id="sort">
+            <p>Первый уровень:
+                <select id="fieldsFirst">
+
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsFirstDesc">
+            </p>
+            <p>Второй уровень:
+                <select id="fieldsSecond">
+
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsSecondDesc">
+            </p>
+            <p>Третий уровень:
+                <select id="fieldsThird">
+
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsThirdDesc">
+            </p>
+            <p>
+                <input type="button" value="Сортировать" id="sortbutton">
+                <input type="reset" value="Сбросить настройки" id="resetsort">
+            </p>
+        </form>
+    </details>
+    </p>
+    <p>
+    <table cellpadding="5" border="2" align="center" id="list">
+
+    </table>
+    </p>
+    <div class="footer">
+        <div class="left">© Налимов Д. В., Б9121-09.03.04, 2023-2024</div>
+        <div class="right"><a href="t.me/dimchiquee"><img src="img/tgicon.svg">Telegram</a></div>
+    </div>
+</body>
+<script src="javascript/data.js"></script>
+<script src="javascript/sort.js"></script>
+</html>
