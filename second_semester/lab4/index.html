@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная работа 4</title>
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+    <style>
+        svg {
+            border: 2px solid purple;
+        }
+        form {
+            display: grid;
+            width: 750px;
+            grid-template-columns: 3;
+            grid-template-rows: 3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="setting">
+        <div class="animBut">
+            <b>Масштаб</b><br>
+            <label for="sxFrom">по x: </label>
+            <input type="number" id="sxFrom" value="1" max=50 min=1>
+            <label for="sxTo">до: </label>
+            <input type="number" id="sxTo" value="1.5" max=50 min=1><br>
+            <label for="syFrom">по y: </label>
+            <input type="number" id="syFrom" value="1" max=50 min=1>
+            <label for="syTo">до: </label>
+            <input type="number" id="syTo" value="1.5" max=50 min=1><br><br>
+            <label for="animSpeed">Скорость анимации(с.)</label>
+            <input type="number" id="animSpeed" value="5" max=20 min=1><br>
+            <input type="button" value="Анимировать" id="animPict">
+            <input type="button" value="Очистить" id="resetPict">
+        </div>
+        
+    </form>
+    <svg></svg>
+</body>
+<script src="program.js"></script>
+
+</html>
