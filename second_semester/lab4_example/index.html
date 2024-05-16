@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная работа 4</title>
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+    <style>
+        form{
+            display: grid;
+            width: 750px;
+            grid-template-columns: 3;
+            grid-template-rows: 6;
+        }
+        div{
+            width: 250px;
+            grid-row: 1;
+        }
+        div.buttons {
+            
+            padding: 10px 0px;
+            grid-row: 2;
+        }
+        div.anim{
+            width: 100%;
+            grid-row: 3;
+            grid-column: 1/3;
+            display: flex;
+        }
+        div.anim select{
+            margin: 0px 10px;            
+        }
+        div.animBut{
+            grid-row: 5;
+        }
+        div.pathBut{
+            width: 100%;
+            grid-row: 4;
+            grid-column: 1/3;
+            display: flex;
+        }
+        div.paths{
+            grid-row: 6;
+        }
+        svg {
+            border: 1px solid grey;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="setting">
+        <div id="coord">
+            <b>Координаты рисунка</b><br>
+            <label for="cxFrom">x: </label>
+            <input type="number" id="cxFrom" value="300" max=600 min=0>
+            <span style="display: none"><label for="cxTo">до: </label>
+            <input type="number" id="cxTo" value="550" max=600 min=0></span><br>
+            <label for="cyFrom">y: </label>
+            <input type="number" id="cyFrom" value="300" max=600 min=0>
+            <span style="display: none"><label for="cyTo">до: </label>
+            <input type="number" id="cyTo" value="550" max=600 min=0></span>
+        </div>
+        <div id="paths" style="display: none">
+            <b>Пути перемещения</b><br>
+            <select id="pathType">
+                <option value="0">Буквой "Г"</option>
+                <option value="1">По кругу</option>
+            </select>
+        </div>
+        <div class="pathBut">
+            <span style="display: none">
+            <input type="checkbox" id="pathEnabled">
+            <label for="pathEnabled">Перемещение вдоль пути?</label>
+        </span>
+        </div>
+        
+        <div id="scale">
+            <b>Масштаб</b><br>
+            <label for="sxFrom">по x: </label>
+            <input type="number" id="sxFrom" value="1" max=50 min=1>
+            <span style="display: none"><label for="sxTo">до: </label>
+            <input type="number" id="sxTo" value="1.5" max=50 min=1></span><br>
+            <label for="syFrom">по y: </label>
+            <input type="number" id="syFrom" value="1" max=50 min=1>
+            <span style="display: none"><label for="syTo">до: </label>
+            <input type="number" id="syTo" value="1.5" max=50 min=1></span>
+        </div>
+        <div id="rotate"><b>Поворот</b><br>
+            <label for="degreeFrom">угол: </label>
+            <input type="number" id="degreeFrom" value="0" max=360 min=0>
+            <span style="display: none"><label for="degreeTo">до</label>
+            <input type="number" id="degreeTo" value="180" max=360 min=0></span>
+        </div>
+        <div class="buttons">
+            <input type="button" value="Нарисовать" id="makePict">
+            <input type="button" value="Очистить" id="resetPict">
+        </div>
+        <div class="anim">
+        <input type="checkbox" id="animationEnabled">
+        <label for="animationEnabled">Включить анимацию?</label>
+        <select id="animationType">
+            <option value="linear">Linear</option>
+            <option value="elastic">Elastic</option>
+            <option value="bounce">Bounce</option>
+        </select>
+    </div>
+    <div class="animBut">
+        <input type="button" value="Анимировать" id="animPict" style="display: none">
+    </div>
+    </form>
+    <svg></svg>
+</body>
+<script src="program.js"></script>
+
+</html>
