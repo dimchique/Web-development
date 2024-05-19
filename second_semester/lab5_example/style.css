@@ -1,0 +1,20 @@
+table{
+    background-color: #c0c0c0;
+}
+th{
+    background-color: #acacac;
+}
+tr{
+    background-color: #dbdbdb;
+}
+table td{
+    padding: 5px;
+}
+svg text {
+ font: 8px Verdana;
+}
+svg path, line {
+ fill: none;
+ stroke: #333333;
+ width: 1px;
+}
