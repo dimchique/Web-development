@@ -1,0 +1,14 @@
+body{
+  font-family: 'Courier New', Courier, monospace;
+}
+th{
+  padding: 5px;
+  margin: 5px;
+  border: solid thin grey;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: "";
+}
